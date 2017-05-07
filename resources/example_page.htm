@@ -1,0 +1,573 @@
+
+		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+			<html>
+			<head>
+            
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="/jscript/common.js?v=1782"></script>
+    <script language="javascript" type="text/javascript" src="/jscript/jquery.jcarousel.min.js?v=1782"></script>
+    <script language="javascript" type="text/javascript" src="/jscript/jquery.fancybox.pack.js?v=1782"></script>
+			
+			<script language="JavaScript">
+
+			    var theImages = new Array();
+
+                function MM_swapImgRestore() { //v3.0
+                  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+                }
+
+                function MM_preloadImages() { //v3.0
+                  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+                    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; ia.length; i++)
+                    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+                }
+
+                function MM_findObj(n, d) { //v4.01
+                  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+                    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+                  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+                  for(i=0;!x&&d.layers&&id.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+                  if(!x && d.getElementById) x=d.getElementById(n); return x;
+                }
+
+                function MM_swapImage() { //v3.0
+                  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+                   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+                }
+			
+			
+			function showImage(){
+				document.write('<img src="'+theImages[whichImage]+'">');
+			}
+			</script>
+			
+				<title>Lost and Found - Adoptable Pets; adopt a dog; adopt a cat</title>
+				<script language="javascript" type="text/javascript" src="/jscript/jquery.qtip.min.js?1782"></script>
+<link type="text/css" href="/css/jquery-ui.css?1782" rel="stylesheet" />
+<link type="text/css" href="/css/jquery.qtip.min.css?1782" rel="stylesheet" />
+				<link rel="stylesheet" type="text/css" href="/customise/style.css">
+    <link rel="stylesheet" type="text/css" href="">
+				<link rel="stylesheet" type="text/css" href="/css/generic.css" />
+				<script language="javascript" type="text/javascript" src="/jscript/browserCheck.js"></script>
+<script language="javascript" type="text/javascript" src="/jscript/xmlHttp.js"></script>
+<script language="javascript" type="text/javascript" src="/jscript/arraySelect.js"></script>
+<script language="javascript" type="text/javascript" src="/jscript/disableField.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+function clearmodels(theList) 
+{
+	//clears the select list
+	var count = theList.length;
+	var i;
+	for(i=1 ; i<count ; i++)
+	{ 
+		theList[1]= null;
+		//document.form.breed[1]= null;
+	} //for
+}//clearmodels
+
+
+
+
+
+function animalTypeChange (frm){
+	
+	//this function runs for onchange even of animal type.
+	//assume that the form has a FERAL field.
+	var oldType;
+	var animalType = frm.animalType.value;
+
+	
+	//A rather awesome fix for Adult/Juvenile searches MH 18/Apr/08
+	animalType = animalType.split(",",1);
+	
+	callAjaxEval("/search/colourAjax.asp?formName="+ frm.name +"&animalType="+ animalType +"&defaultPrimary=" + frm.colour.value + "&defaultSecondary=" + frm.colour2.value, "");	
+	
+	// Clear breed boxes	
+	var b1 = frm.breed;
+	var b2 = frm.breedHidden;
+    var hb1 = frm.breed2;
+	var hb2 = frm.breed2Hidden;
+	
+	b1.value="";
+	b2.value="";
+	hb1.value="";
+	hb2.value="";
+	
+}//animalTypeChange()
+
+
+
+
+function changeStatusDate()
+{
+	document.form.statusdate.value = "5/6/2017";
+	
+	//make the petdetect drop out date the value of the status date
+	if (document.form.status.value == 10)
+	{	
+		document.form.petDetectDate.value = "5/16/2017 5:30:03 PM";
+	}//if
+}//changeStatusDate
+
+-->
+</script>
+
+<script language="javascript" type="text/javascript">
+<!--
+function newWindowBar(url, target)
+{
+	window.open(url,target,
+		'left=100,top=100,width=650,height=450,location=yes,menubar=yes,toolbar=yes,resizable,scrollbars,status');
+}
+-->
+</script>
+			</head>
+			
+			<body  style="background-color:white;">
+
+				
+<div id="contentmain">
+		
+
+<div id="contentpane">
+    <h1 id="heading">Charlottesville Albemarle SPCA Adoptable Pets </h1>
+
+    <script language="javascript" type="text/javascript" src="/jscript/NewWindow.js"></script>
+
+    <p class="page_link return-to-search-results-link">
+        <a class="pageLink" href="/search/default.asp?advanced=&searchType=4&s=adoption"><span class="green_arrow">&lt;</span>
+        &nbsp;Return to Search Page
+        </a>
+    </p>
+
+    
+Search results are listed in this order:<br />
+Alphabetically by primary breed
+    <p>
+        <form name="form" action="searchResults.asp?s=adoption&searchType=4&searchTypeId=4&animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&datelostfoundmonth=5&datelostfoundday=2&datelostfoundyear=2016&tpage=6&submitbtn=Find+Animals&pagesize=15&task=view" method="post" id="Form2">
+            Results per page: 
+            <select name="resultsPerPage" id="resultsPerPage" onchange="this.form.submit()">
+            
+                <option value="15" >15</option>
+            
+                <option value="25" >25</option>
+            
+                <option value="35" >35</option>
+            
+                <option value="45" >45</option>
+            
+            </select>
+        </form>
+    </p>
+    <!--DECLARE @searchTypeId INT; 
+DECLARE @animalType0 INT; 
+DECLARE @animalType1 INT; 
+DECLARE @animalType2 INT; 
+DECLARE @animalType3 INT; 
+DECLARE @animalType4 INT; 
+DECLARE @animalType5 INT; 
+DECLARE @animalType6 INT; 
+DECLARE @animalType7 INT; 
+DECLARE @disasterTypeID INT; 
+DECLARE @breed INT; 
+DECLARE @breed2 INT; 
+DECLARE @colour INT; 
+DECLARE @colour2 INT; 
+DECLARE @sex INT; 
+DECLARE @declawed INT; 
+DECLARE @ageGroup INT; 
+DECLARE @animalName VARCHAR(200); 
+DECLARE @iShelterLocation INT; 
+DECLARE @dDate DATETIME; 
+DECLARE @dDateLostFound DATETIME; 
+DECLARE @regionId INT; 
+DECLARE @size INT; 
+DECLARE @iState INT; 
+DECLARE @rspca_id INT; 
+DECLARE @distance INT; 
+DECLARE @sDistanceSuburb VARCHAR(200); 
+DECLARE @sDistancePostcode VARCHAR(200); 
+DECLARE @rowCount INT; 
+DECLARE @startRow INT; 
+DECLARE @TotalRows INT; 
+SET @searchTypeId = ? ; 
+SET @animalType0 = ? ; 
+SET @animalType1 = ? ; 
+SET @animalType2 = ? ; 
+SET @animalType3 = ? ; 
+SET @animalType4 = ? ; 
+SET @animalType5 = ? ; 
+SET @animalType6 = ? ; 
+SET @animalType7 = ? ; 
+SET @disasterTypeID = ? ; 
+SET @breed = ? ; 
+SET @breed2 = ? ; 
+SET @colour = ? ; 
+SET @colour2 = ? ; 
+SET @sex = ? ; 
+SET @declawed = ? ; 
+SET @ageGroup = ? ; 
+SET @animalName = ? ; 
+SET @iShelterLocation = ? ; 
+SET @dDate = ? ; 
+SET @dDateLostFound = ? ; 
+SET @regionId = ? ; 
+SET @size = ? ; 
+SET @iState = ? ; 
+SET @rspca_id = ? ; 
+SET @distance = ? ; 
+SET @sDistanceSuburb = ? ; 
+SET @sDistancePostcode = ? ; 
+SET @rowCount = ? ; 
+SET @startRow = ? ; 
+SET @TotalRows = ? ; 
+Set nocount on;
+Declare @Animalid int
+Declare @petdtect int
+DECLARE @tmpTable TABLE (
+    [Animalid] int not null primary key,
+    [petdtect] int
+)
+Set RowCount @TotalRows
+DECLARE PagingCursor CURSOR STATIC READ_ONLY FOR 
+SELECT A.animalID,
+A.petdTect
+  From dbo.tblAnimal A (nolock) 
+ LEFT OUTER JOIN dbo.tblRegion R (nolock) ON A.RegionID = R.RegionID AND R.show=1 
+ LEFT OUTER JOIN dbo.tblBranches BR (nolock) ON R.RegionID = BR.RegionID 
+ LEFT JOIN dbo.lookupAnimalColours AC (nolock) on AC.ID = A.Colour 
+ LEFT JOIN dbo.lookupAnimalColours AC2 (nolock) on AC2.ID = A.Colour2 
+ LEFT OUTER JOIN dbo.tblAddress ADR (nolock) ON A.lostfoundaddressid = ADR.id  LEFT OUTER JOIN dbo.lookupGender G (nolock) on A.sex = G.id 
+ LEFT OUTER JOIN dbo.lookupBreeds B1 (nolock) on A.breed = B1.ID 
+ LEFT OUTER JOIN dbo.lookupBreeds B2 (nolock) on A.breed2 = B2.ID 
+ LEFT OUTER JOIN dbo.lookupAnimalType T (nolock) on A.type = T.id 
+ LEFT OUTER JOIN dbo.lookupAnimalSize SZ (nolock) on A.size = SZ.sizeID 
+ INNER JOIN dbo.tblPerson P (nolock) ON A.personID = P.personID 
+ LEFT OUTER JOIN dbo.tblAddress ALF (nolock) ON A.lostFoundAddressID = ALF.id 
+ LEFT OUTER JOIN dbo.lookupListItem LCM (nolock) on A.colourMatchID = LCM.id 
+ LEFT OUTER JOIN dbo.lookupListItem SRC (nolock) on A.sourceID = SRC.id 
+ LEFT OUTER JOIN dbo.tblSuburbList SL (nolock) ON ALF.suburbid = SL.id 
+ LEFT OUTER JOIN dbo.tblAddress AD (nolock) ON P.personID = AD.personID AND AD.addressType='R' 
+ LEFT OUTER JOIN dbo.tblSuburbList ADSL (nolock) ON AD.suburbid = ADSL.id 
+ 
+WHERE EXISTS (SELECT 1 FROM dbo.TblAnimalInSearch AIS WHERE AIS.AnimalId = A.AnimalId AND AIS.SearchTypeId = @searchTypeId) 
+ AND (A.type IN (@animalType0,@animalType1,@animalType2,@animalType3,@animalType4,@animalType5,@animalType6,@animalType7)) 
+AND NOT EXISTS (SELECT 1 FROM dbo.tblBreedExclude WHERE breedID = A.breed OR breedID = A.breed2) AND A.active>0 AND A.verified>0 
+ order by B1.Breed, A.animalID
+Open PagingCursor
+Fetch Relative @StartRow From PagingCursor Into 
+@Animalid,
+@petdtect
+while (@RowCount <> 0) And (@@Fetch_Status = 0)
+begin
+ Insert Into @tmpTable (
+Animalid,
+petdtect)
+  Values (
+@Animalid,
+@petdtect)
+ Fetch Next From PagingCursor Into
+@Animalid,
+@petdtect
+ Set @RowCount = @RowCount - 1
+end
+Close PagingCursor
+Deallocate PagingCursor
+SELECT A.animalID,
+A.petdTect,
+T.Type,B1.breed,A.Sex,A.Colour,AC.Colour AS ColourName,A.Colour2,AC2.Colour AS ColourName2, R.displayName AS Location, 
+A.photo, A.AnimalID, A.name, A.active, A.RegionID, A.reward, totalWeight,SZ.sizeDescription as Size,  
+SL.suburb, A.Date, B2.Breed AS breed2, A.approxAge, A.ageWeeks, A.ageYears,  
+A.ageMonths, A.rspca_id, A.crossbreed, A.CoatType, 
+A.personID, G.gender, A.desexed, A.dateIn, A.dateOut, a.PetDTect, 
+Adsl.suburb AS physSuburb, Ad.postcode AS physPostcode, A.rspca_id, BR.postcode, A.rspca_id, LCM.displaytext AS ColourMatch, A.colourMatchID, LCM.stringAttribute AS cellColour, A.type AS animalTypeID, A.dateAvailable, A.sourceDate, SRC.displayText AS [source], A.adoptionamount, ADR.extraAddress 'LostFoundAddress' 
+ From dbo.tblAnimal A (nolock) 
+ LEFT OUTER JOIN dbo.tblRegion R (nolock) ON A.RegionID = R.RegionID AND R.show=1 
+ LEFT OUTER JOIN dbo.tblBranches BR (nolock) ON R.RegionID = BR.RegionID 
+ LEFT JOIN dbo.lookupAnimalColours AC (nolock) on AC.ID = A.Colour 
+ LEFT JOIN dbo.lookupAnimalColours AC2 (nolock) on AC2.ID = A.Colour2 
+ LEFT OUTER JOIN dbo.tblAddress ADR (nolock) ON A.lostfoundaddressid = ADR.id  LEFT OUTER JOIN dbo.lookupGender G (nolock) on A.sex = G.id 
+ LEFT OUTER JOIN dbo.lookupBreeds B1 (nolock) on A.breed = B1.ID 
+ LEFT OUTER JOIN dbo.lookupBreeds B2 (nolock) on A.breed2 = B2.ID 
+ LEFT OUTER JOIN dbo.lookupAnimalType T (nolock) on A.type = T.id 
+ LEFT OUTER JOIN dbo.lookupAnimalSize SZ (nolock) on A.size = SZ.sizeID 
+ INNER JOIN dbo.tblPerson P (nolock) ON A.personID = P.personID 
+ LEFT OUTER JOIN dbo.tblAddress ALF (nolock) ON A.lostFoundAddressID = ALF.id 
+ LEFT OUTER JOIN dbo.lookupListItem LCM (nolock) on A.colourMatchID = LCM.id 
+ LEFT OUTER JOIN dbo.lookupListItem SRC (nolock) on A.sourceID = SRC.id 
+ LEFT OUTER JOIN dbo.tblSuburbList SL (nolock) ON ALF.suburbid = SL.id 
+ LEFT OUTER JOIN dbo.tblAddress AD (nolock) ON P.personID = AD.personID AND AD.addressType='R' 
+ LEFT OUTER JOIN dbo.tblSuburbList ADSL (nolock) ON AD.suburbid = ADSL.id 
+
+WHERE EXISTS (SELECT 1 FROM @tmpTable TempTable WHERE TempTable.[Animalid] = A.AnimalID)
+order by B1.Breed, A.animalID
+Set RowCount 0
+-->
+        <table rows="1" cols="1" style="width:400px;" id="searchPageTableTop">
+            <tr style="text-align:center;">
+                <td style="text-align:center; font-size:16px;font-weight:bold;">                    
+        &nbsp;<a style="padding-right:20px;" class="SearchResultsPageLink" href='/search/searchResults.asp?s=adoption&searchType=4&animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&datelostfoundmonth=5&datelostfoundday=2&datelostfoundyear=2016&submitbtn=Find+Animals&pagesize=15&task=view&searchTypeId=4&tpage=5'>&lt;&lt;</a><a class="SearchResultsPageLink" id="searchPageLink1" href='/search/searchResults.asp?s=adoption&searchType=4&animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&datelostfoundmonth=5&datelostfoundday=2&datelostfoundyear=2016&submitbtn=Find+Animals&pagesize=15&task=view&searchTypeId=4&tpage=1'>1</a> <a class="SearchResultsPageLink" id="searchPageLink2" href='/search/searchResults.asp?s=adoption&searchType=4&animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&datelostfoundmonth=5&datelostfoundday=2&datelostfoundyear=2016&submitbtn=Find+Animals&pagesize=15&task=view&searchTypeId=4&tpage=2'>2</a> <a class="SearchResultsPageLink" id="searchPageLink3" href='/search/searchResults.asp?s=adoption&searchType=4&animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&datelostfoundmonth=5&datelostfoundday=2&datelostfoundyear=2016&submitbtn=Find+Animals&pagesize=15&task=view&searchTypeId=4&tpage=3'>3</a> <a class="SearchResultsPageLink" id="searchPageLink4" href='/search/searchResults.asp?s=adoption&searchType=4&animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&datelostfoundmonth=5&datelostfoundday=2&datelostfoundyear=2016&submitbtn=Find+Animals&pagesize=15&task=view&searchTypeId=4&tpage=4'>4</a> <a class="SearchResultsPageLink" id="searchPageLink5" href='/search/searchResults.asp?s=adoption&searchType=4&animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&datelostfoundmonth=5&datelostfoundday=2&datelostfoundyear=2016&submitbtn=Find+Animals&pagesize=15&task=view&searchTypeId=4&tpage=5'>5</a> <b class="SearchResultsPageLink">6</b><a class="hide" id="searchPageLink6" href='/search/searchResults.asp?s=adoption&searchType=4&animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&datelostfoundmonth=5&datelostfoundday=2&datelostfoundyear=2016&submitbtn=Find+Animals&pagesize=15&task=view&searchTypeId=4&tpage=6'>6</a> <a class="SearchResultsPageLink" id="searchPageLink7" href='/search/searchResults.asp?s=adoption&searchType=4&animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&datelostfoundmonth=5&datelostfoundday=2&datelostfoundyear=2016&submitbtn=Find+Animals&pagesize=15&task=view&searchTypeId=4&tpage=7'>7</a>&nbsp;<a style="padding-left:20px;" class="SearchResultsPageLink" href='/search/searchResults.asp?s=adoption&searchType=4&animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&datelostfoundmonth=5&datelostfoundday=2&datelostfoundyear=2016&submitbtn=Find+Animals&pagesize=15&task=view&searchTypeId=4&tpage=7'>&gt;&gt;</a>
+                    <br>
+                </td>
+            </tr>
+        </table>        
+    
+            <fieldset class="search-results-fieldset">
+                <table class="search-results-table">
+                
+    <tr><td class="searchResultsCell">
+    
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54121">
+            <img src="/photos//lostfound/54121.jpg" class="pic" alt="click to view animal details" align="left" style=""/></a>
+        
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54121">Loria</a><br />
+    Domestic Short Hair cross<br>Spay/Neuter
+        <br>Female - 5Yrs 1Wks (approx)
+    <br />Animal ID: 98427
+    <br />
+    <a class="search-results-view-details-link" href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54121">View Details</a>
+</td>
+
+</tr>
+
+    <tr><td class="searchResultsCell">
+    
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54134">
+            <img src="/photos//lostfound/54134.jpg" class="pic" alt="click to view animal details" align="left" style=""/></a>
+        
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54134">Gandalf</a><br />
+    Domestic Short Hair cross<br>Spay/Neuter
+        <br>Male - 4Yrs (approx)
+    <br />Animal ID: 98529
+    <br />
+    <a class="search-results-view-details-link" href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54134">View Details</a>
+</td>
+
+</tr>
+
+    <tr><td class="searchResultsCell">
+    
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54135">
+            <img src="/photos//lostfound/54135.jpg" class="pic" alt="click to view animal details" align="left" style=""/></a>
+        
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54135">Panther</a><br />
+    Domestic Short Hair cross<br>Spay/Neuter
+        <br>Male - 7Yrs (approx)
+    <br />Animal ID: 98533
+    <br />
+    <a class="search-results-view-details-link" href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54135">View Details</a>
+</td>
+
+</tr>
+
+    <tr><td class="searchResultsCell">
+    
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54137">
+            <img src="/photos//lostfound/54137.jpg" class="pic" alt="click to view animal details" align="left" style=""/></a>
+        
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54137">Reagan</a><br />
+    Domestic Short Hair cross<br>Spay/Neuter
+        <br>Female - 1Yrs (approx)
+    <br />Animal ID: 98528
+    <br />
+    <a class="search-results-view-details-link" href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54137">View Details</a>
+</td>
+
+</tr>
+
+    <tr><td class="searchResultsCell">
+    
+        <div class="no-photo-search-results">No Photo</div>
+        
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54138">Smiley</a><br />
+    Domestic Short Hair cross<br>Spay/Neuter
+        <br>Male - 10Yrs (approx)
+    <br />Animal ID: 98532
+    <br />
+    <a class="search-results-view-details-link" href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54138">View Details</a>
+</td>
+
+</tr>
+
+    <tr><td class="searchResultsCell">
+    
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54140">
+            <img src="/photos//lostfound/54140.jpg" class="pic" alt="click to view animal details" align="left" style=""/></a>
+        
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54140">Finn</a><br />
+    Domestic Short Hair cross<br>Spay/Neuter
+        <br>Male - 8Mths 3Wks (approx)
+    <br />Animal ID: 98120
+    <br />
+    <a class="search-results-view-details-link" href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54140">View Details</a>
+</td>
+
+</tr>
+
+    <tr><td class="searchResultsCell">
+    
+        <div class="no-photo-search-results">No Photo</div>
+        
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54149">Sanford</a><br />
+    Domestic Short Hair cross<br>Spay/Neuter
+        <br>Male - 7Yrs (approx)
+    <br />Animal ID: 98498
+    <br />
+    <a class="search-results-view-details-link" href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54149">View Details</a>
+</td>
+
+</tr>
+
+    <tr><td class="searchResultsCell">
+    
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=53892">
+            <img src="/photos//lostfound/53892.jpg" class="pic" alt="click to view animal details" align="left" style=""/></a>
+        
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=53892">Riley</a><br />
+    Foxhound cross<br>Spay/Neuter
+        <br>Male - 5Yrs 6Mths 2Wks 
+    <br />Animal ID: 93378
+    <br />
+    <a class="search-results-view-details-link" href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=53892">View Details</a>
+</td>
+
+</tr>
+
+    <tr><td class="searchResultsCell">
+    
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=53917">
+            <img src="/photos//lostfound/53917.jpg" class="pic" alt="click to view animal details" align="left" style=""/></a>
+        
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=53917">Robbie</a><br />
+    German Shepherd Dog cross Husky<br>Spay/Neuter
+        <br>Male - 1Yrs 2Mths 
+    <br />Animal ID: 93497
+    <br />
+    <a class="search-results-view-details-link" href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=53917">View Details</a>
+</td>
+
+</tr>
+
+    <tr><td class="searchResultsCell">
+    
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54161">
+            <img src="/photos//lostfound/54161.jpg" class="pic" alt="click to view animal details" align="left" style=""/></a>
+        
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54161">Sadie</a><br />
+    German Shepherd Dog cross Basset Hound<br>Spay/Neuter
+        <br>Female - 3Yrs (approx)
+    <br />Animal ID: 98515
+    <br />
+    <a class="search-results-view-details-link" href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=54161">View Details</a>
+</td>
+
+</tr>
+
+    <tr><td class="searchResultsCell">
+    
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=53093">
+            <img src="/photos//lostfound/53093.jpg" class="pic" alt="click to view animal details" align="left" style=""/></a>
+        
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=53093">Marco</a><br />
+    Hound cross Pit Bull Terrier<br>Spay/Neuter
+        <br>Male - 1Yrs 5Mths 2Wks 
+    <br />Animal ID: 95356
+    <br />
+    <a class="search-results-view-details-link" href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=53093">View Details</a>
+</td>
+
+</tr>
+
+    <tr><td class="searchResultsCell">
+    
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=53592">
+            <img src="/photos//lostfound/53592.jpg" class="pic" alt="click to view animal details" align="left" style=""/></a>
+        
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=53592">Cher</a><br />
+    Hound cross<br>Spay/Neuter
+        <br>Female - 2Yrs 3Mths 1Wks 
+    <br />Animal ID: 96653
+    <br />
+    <a class="search-results-view-details-link" href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=53592">View Details</a>
+</td>
+
+</tr>
+
+    <tr><td class="searchResultsCell">
+    
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=53593">
+            <img src="/photos//lostfound/53593.jpg" class="pic" alt="click to view animal details" align="left" style=""/></a>
+        
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=53593">Tai</a><br />
+    Hound cross<br>Spay/Neuter
+        <br>Female - 3Yrs 3Mths 1Wks 
+    <br />Animal ID: 96654
+    <br />
+    <a class="search-results-view-details-link" href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=53593">View Details</a>
+</td>
+
+</tr>
+
+    <tr><td class="searchResultsCell">
+    
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=53930">
+            <img src="/photos//lostfound/53930.jpg" class="pic" alt="click to view animal details" align="left" style=""/></a>
+        
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=53930">Daxx</a><br />
+    Hound cross Boxer<br>Spay/Neuter
+        <br>Male - 1Yrs 1Mths 
+    <br />Animal ID: 97868
+    <br />
+    <a class="search-results-view-details-link" href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=53930">View Details</a>
+</td>
+
+</tr>
+
+    <tr><td class="searchResultsCell">
+    
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=34351">
+            <img src="/photos//lostfound/34351.jpg" class="pic" alt="click to view animal details" align="left" style=""/></a>
+        
+        <a href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=34351">Emmie</a><br />
+    Maine Coon cross<br>Spay/Neuter
+        <br>Female - 7Yrs 1Mths 3Wks 
+    <br />Animal ID: 67418
+    <br />
+    <a class="search-results-view-details-link" href="/animal/animalDetails.asp?s=adoption&amp;searchTypeId=4&amp;animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&amp;datelostfoundmonth=5&amp;datelostfoundday=2&amp;datelostfoundyear=2016&amp;tpage=6&amp;submitbtn=Find+Animals&amp;pagesize=15&amp;task=view&amp;searchType=4&amp;animalid=34351">View Details</a>
+</td>
+
+</tr>
+</table></fieldset>
+        <table rows="1" cols="1" style="width:400px;" id="searchPageTableBottom">
+            <tr style="text-align:center;">
+                <td style="text-align:center; font-size:16px;font-weight:bold;">                    
+        &nbsp;<a style="padding-right:20px;" class="SearchResultsPageLink" href='/search/searchResults.asp?s=adoption&searchType=4&animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&datelostfoundmonth=5&datelostfoundday=2&datelostfoundyear=2016&submitbtn=Find+Animals&pagesize=15&task=view&searchTypeId=4&tpage=5'>&lt;&lt;</a><a class="SearchResultsPageLink" id="searchPageLink1" href='/search/searchResults.asp?s=adoption&searchType=4&animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&datelostfoundmonth=5&datelostfoundday=2&datelostfoundyear=2016&submitbtn=Find+Animals&pagesize=15&task=view&searchTypeId=4&tpage=1'>1</a> <a class="SearchResultsPageLink" id="searchPageLink2" href='/search/searchResults.asp?s=adoption&searchType=4&animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&datelostfoundmonth=5&datelostfoundday=2&datelostfoundyear=2016&submitbtn=Find+Animals&pagesize=15&task=view&searchTypeId=4&tpage=2'>2</a> <a class="SearchResultsPageLink" id="searchPageLink3" href='/search/searchResults.asp?s=adoption&searchType=4&animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&datelostfoundmonth=5&datelostfoundday=2&datelostfoundyear=2016&submitbtn=Find+Animals&pagesize=15&task=view&searchTypeId=4&tpage=3'>3</a> <a class="SearchResultsPageLink" id="searchPageLink4" href='/search/searchResults.asp?s=adoption&searchType=4&animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&datelostfoundmonth=5&datelostfoundday=2&datelostfoundyear=2016&submitbtn=Find+Animals&pagesize=15&task=view&searchTypeId=4&tpage=4'>4</a> <a class="SearchResultsPageLink" id="searchPageLink5" href='/search/searchResults.asp?s=adoption&searchType=4&animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&datelostfoundmonth=5&datelostfoundday=2&datelostfoundyear=2016&submitbtn=Find+Animals&pagesize=15&task=view&searchTypeId=4&tpage=5'>5</a> <b class="SearchResultsPageLink">6</b><a class="hide" id="searchPageLink6" href='/search/searchResults.asp?s=adoption&searchType=4&animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&datelostfoundmonth=5&datelostfoundday=2&datelostfoundyear=2016&submitbtn=Find+Animals&pagesize=15&task=view&searchTypeId=4&tpage=6'>6</a> <a class="SearchResultsPageLink" id="searchPageLink7" href='/search/searchResults.asp?s=adoption&searchType=4&animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&datelostfoundmonth=5&datelostfoundday=2&datelostfoundyear=2016&submitbtn=Find+Animals&pagesize=15&task=view&searchTypeId=4&tpage=7'>7</a>&nbsp;<a style="padding-left:20px;" class="SearchResultsPageLink" href='/search/searchResults.asp?s=adoption&searchType=4&animalType=2%2C3%2C93%2C85%2C15%2C16%2C86%2C73&datelostfoundmonth=5&datelostfoundday=2&datelostfoundyear=2016&submitbtn=Find+Animals&pagesize=15&task=view&searchTypeId=4&tpage=7'>&gt;&gt;</a>
+                    <br>
+                </td>
+            </tr>
+        </table>        
+    
+</div>
+
+
+
+
+</div>
+
+
+			</body>
+
+		</html>
+		
+
+<script language="javascript" type="text/javascript">
+
+    $(document).ready(function() 
+    {
+        initQtip();     //jscript/common.js
+        
+    });  //document.ready
+
+</script>
+
