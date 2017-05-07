@@ -5,7 +5,11 @@ Scrapes the [Charlottesville-Albemarle SPCA](http://caspca.org/) for their adopt
 ## Usage
 
 * Clone this repo
+<<<<<<< Updated upstream
 * Install [Leiningen](https://leiningen.org/) (Or use Brew on OSX)
+=======
+* Install [Leiningen](https://leiningen.org/) (Or you can brew install it on OSX)
+>>>>>>> Stashed changes
 * In the repo directory run `lein run`
 * Or create an UberJar with `lein uberjar`
 
