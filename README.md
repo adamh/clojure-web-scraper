@@ -1,11 +1,11 @@
 # clj-scraper
 
-Scrapes the [Charlottesville-Albemarle SPCA](http://caspca.org/) for their adobatable animals. Then stores the animals name, picture, and link to their details in a SQLite Database.
+Scrapes the [Charlottesville-Albemarle SPCA](http://caspca.org/) for their adoptable animals. Then stores the animals name, picture, and link to their details in a SQLite Database.
 
 ## Usage
 
 * Clone this repo
-* Install [Leiningen](https://leiningen.org/)
+* Install [Leiningen](https://leiningen.org/) (Or use Brew on OSX)
 * In the repo directory run `lein run`
 * Or create an UberJar with `lein uberjar`
 
