@@ -1,4 +1,4 @@
-# clj-scraper
+# Clojure Web Scraper
 
 Scrapes the [Charlottesville-Albemarle SPCA](http://caspca.org/) for their adoptable animals. Then stores the animals name, picture, and link to their details in a SQLite Database.
 
