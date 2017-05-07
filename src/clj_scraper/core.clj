@@ -42,7 +42,7 @@
   [(string/join (:content m)), (:href (:attrs m))])
 
 (defn extract-imgs 
-  "Get all img tags or lack of tags"
+  "Get all img tags or lack of images"
   [dom]
   (html/select dom [#{:img.pic :div.no-photo-search-results}]))
 
