@@ -76,35 +76,18 @@
   (str base-url (:href (:attrs (nth arrows 0))))
   )
 
-; do-scrape and test-dom should probably be combined into one function
-; with a single recursive call.
-(declare do-scrape)
-
-(defn test-dom
-  "Test the DOM to see if it contains >>, if it does then go to the next page and scrape"
-  [dom]
-  (let [arrows (vec (extract-arrows dom))]
-    (if (= (count arrows) 2)
-    (do-scrape (get-dom (get-linkfromarrows arrows)))
-    [])))
-
 (defn do-scrape
-  "First check the DOM for other pages then get the content on this DOM"
-  [dom]
-  (concat (test-dom dom) (get-content dom)))
-
-
-(defn do-scrape2
+  "Recursively scrape all search pages"
   [dom]
   (let [arrows (vec (extract-arrows dom))]
     (if (= (count arrows) 2)
-    (concat (do-scrape2 (get-dom (get-linkfromarrows arrows))) (get-content dom))
+    (concat (do-scrape (get-dom (get-linkfromarrows arrows))) (get-content dom))
     (get-content dom))))
 
 
 (defn -main
   [& args]
     (create-db)
-    (let [data (vec (do-scrape2 (get-dom website)))]
+    (let [data (vec (do-scrape (get-dom website)))]
       (doall (map insert-record data)))
     )
