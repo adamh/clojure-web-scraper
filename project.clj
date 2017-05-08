@@ -1,8 +1,8 @@
 (defproject clj-scraper "0.1.0-SNAPSHOT"
   :description "Scrape the caspca"
   :url "http://adamh.io"
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :license {:name "MIT"
+            :url "https://opensource.org/licenses/MIT"}
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [enlive "1.1.6"]
                  [http-kit "2.1.18"]
