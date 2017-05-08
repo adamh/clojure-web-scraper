@@ -14,7 +14,8 @@
   (sql/execute! db ["drop table if exists animals"])
   (try 
     (let [cs (sql/create-table-ddl :animals
-                                    [[:img :text]
+                                    [[:id :integer :primary :key :autoincrement]
+                                    [:img :text]
                                     [:name :text]
                                     [:link :text]])]
         (sql/execute! db [cs]))
