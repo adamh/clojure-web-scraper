@@ -9,7 +9,7 @@ Scrapes the [Charlottesville-Albemarle SPCA](http://caspca.org/) for their adopt
 * In the repo directory run `lein run`
 * Or create an UberJar with `lein uberjar`
 
-## Scraping Quirks Explaned
+## Scraping Quirks Explained
 
 You may notice some not pretty code for scraping the search pages. This is because:
 * An Animal may or may not have an image. If there's no image a div of a different class appears.
