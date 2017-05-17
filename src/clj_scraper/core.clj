@@ -63,7 +63,7 @@
   [dom]
   (let [imgs (map find-imglocs (extract-imgs dom))]
      (let [links (map find-linkvalues (filter filter-links (extract-links dom)))] 
-        (vec (map combine-imgslinks imgs links)))))
+        (map combine-imgslinks imgs links))))
 
 (defn extract-arrows
   "Extract all << or >> from the DOM"
